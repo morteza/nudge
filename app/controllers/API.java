@@ -1,5 +1,5 @@
 /*******************************************************************************
- *        File: Application.java
+ *        File: API.java
  *      Author: Morteza Ansarinia <ansarinia@me.com>
  *  Created on: Jan 31, 2014
  *     Project: onto.nudge
@@ -7,18 +7,18 @@
  *******************************************************************************/
 package controllers;
 
-import play.i18n.Messages;
-import play.mvc.*;
-import views.html.*;
+import com.fasterxml.jackson.databind.JsonNode;
 
-public class Application extends Controller {
+import play.libs.Json;
+import play.mvc.*;
+
+@Security.Authenticated(Secured.class)
+public class API extends Controller {
 
     public static Result index() {
-        return ok(index.render(Messages.get("application.name")));
-    }
-    
-    public static Result projects() {
-    	return TODO;
+    	JsonNode result = Json.newObject();
+    	//result = request().body().asJson();
+        return ok(result);
     }
 
 }

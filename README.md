@@ -1,6 +1,6 @@
 ## nudge
 
-Nudge yourself!
+Nudge yourself to finish the job!
 
 ## Copyright and license
 

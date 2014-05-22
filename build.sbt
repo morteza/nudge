@@ -1,4 +1,6 @@
-name := "nudge"
+// organization := "onto"
+
+name := "onto.nudge"
 
 version := "1.0-SNAPSHOT"
 
