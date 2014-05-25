@@ -13,9 +13,10 @@ Check *References* for more.
 >
 > [Weber Fechner Law](http://en.wikipedia.org/wiki/Weber–Fechner_law) – Wikipedia
 
-## Author
+## Authors
 
-- Morteza Ansarinia <ansarinia@me.com>. ([cards.onto.ir](http://cards.onto.ir))
+- Morteza Ansarinia <ansarinia@me.com> ([cards.onto.ir](http://cards.onto.ir)).
+- Mostafa Salarirad <salarirad@gmail.com>.
 
 ## Copyright and License
 
