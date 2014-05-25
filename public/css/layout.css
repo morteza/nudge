@@ -1,0 +1,118 @@
+/* Open Sans Font as 'Open Sans' */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300);
+
+html{
+  height:100%;
+  background: rgb(200,200,200) url('../img/bg.png') 0 0 repeat;
+  font-family: 'Open Sans';
+}
+
+body {
+  height: 100%;
+  background: transparent;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  font-family: 'Open Sans';
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family: 'Open Sans';
+}
+
+.container {
+      padding-bottom: 40px;
+}
+
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#wrap > .container {
+  padding-top:20px;
+}
+
+/* Custom page footer */
+footer {
+  padding-top: 19px;
+  border-top: 0px;
+  height: 60px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+footer > p {
+  width: auto;
+  text-align: center;
+}
+
+header.navbar {
+  background-color: rgba(255,255,255,0.9);
+  border: 0;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+img.navbar-brand {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+/*
+.navbar-nav.nav > li > a {
+  border: 0px;
+}
+
+.navbar-nav.nav > li.active > a {
+  background-color: #ffffff;
+  border-top: 3px solid rgba(0,0,0,0.75);
+  font-weight:bold;
+}
+*/
+/* Turn off spinner on number inputs (Safari, ...) */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.modal input {
+    margin-bottom: 5px;
+}
+
+.col-header h2 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  background: #ddd;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+  position: relative;
+  max-height: 1em;
+}
+
+.col-header h2::after{
+  content: "";
+  position: absolute;
+  top: 50%; 
+  margin-top: -0.5em;   
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-left: 1em solid #ddd;
+  right: -1em;
+  margin-bottom: 10px;
+}
+
+.col-header hr {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
