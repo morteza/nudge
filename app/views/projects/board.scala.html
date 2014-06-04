@@ -1,4 +1,4 @@
-@(project: Project, proposals: List[models.Ticket],todos: List[models.Ticket],workings: List[models.Ticket],dones: List[models.Ticket])
+@(project: Project, proposals: List[models.Task],todos: List[models.Task],workings: List[models.Task],dones: List[models.Task])
 
 
 @main("Project Dashboard") {
@@ -31,26 +31,26 @@
 
           <div class="row">
             <div class="col-md-12">
-                <a href="#" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#newTicketModal">
-                    <i class="fa fa-plus"></i> New Ticket
+                <a href="#" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#newTaskModal">
+                    <i class="fa fa-plus"></i> New Task
                 </a>
                 <br />
             </div>
           </div>
 
           @for(p <- proposals) {
-          <!-- Tickets column -->
+          <!-- Tasks column -->
           <div class="row">
             <div class="col-md-12">
-              <div class="panel panel-default panel-ticket">
+              <div class="panel panel-default panel-task">
                   <div class="panel-body">
                       <h4>@p.title</h4>
                       <p class="text-muted">@p.description</p>
                   </div>
                   <div class="panel-footer">
                       <div class="text-right">
-                          <a href="@routes.Tickets.edit(p.id)" class="btn btn-default btn-xs pull-left"><i class="fa fa-pencil"></i></a>
-                          <a href="@routes.Tickets.move(p.id)" class="btn btn-success btn-xs"><i class="fa fa-arrow-right"></i></a>
+                          <a href="@routes.Tasks.edit(p.id)" class="btn btn-default btn-xs pull-left"><i class="fa fa-pencil"></i></a>
+                          <a href="@routes.Tasks.move(p.id)" class="btn btn-success btn-xs"><i class="fa fa-arrow-right"></i></a>
                       </div>
                   </div>
               </div>
@@ -68,19 +68,19 @@
           </div>  <!-- /.col-header -->      
 
           @for(p <- todos) {
-          <!-- Tickets column -->
+          <!-- Tasks column -->
           <div class="row">
             <div class="col-md-12">
-              <div class="panel panel-default panel-ticket">
+              <div class="panel panel-default panel-task">
                   <div class="panel-body">
                       <h4>@p.title</h4>
                       <p class="text-muted">@p.description</p>
                   </div>
                   <div class="panel-footer">
                       <div class="text-right">
-                          <a href="@routes.Tickets.edit(p.id)" class="btn btn-default btn-xs pull-left"><i class="fa fa-pencil"></i></a>
-                          <a href="@routes.Tickets.back(p.id)" class="btn btn-danger btn-xs"><i class="fa fa-arrow-left"></i></a>
-                          <a href="@routes.Tickets.move(p.id)" class="btn btn-success btn-xs"><i class="fa fa-arrow-right"></i></a>
+                          <a href="@routes.Tasks.edit(p.id)" class="btn btn-default btn-xs pull-left"><i class="fa fa-pencil"></i></a>
+                          <a href="@routes.Tasks.back(p.id)" class="btn btn-danger btn-xs"><i class="fa fa-arrow-left"></i></a>
+                          <a href="@routes.Tasks.move(p.id)" class="btn btn-success btn-xs"><i class="fa fa-arrow-right"></i></a>
                       </div>
                   </div>
               </div>
@@ -98,18 +98,18 @@
           </div>        
 
           @for(p <- workings) {
-          <!-- Tickets column -->
+          <!-- Tasks column -->
           <div class="row">
-              <div class="panel panel-default panel-ticket">
+              <div class="panel panel-default panel-task">
                   <div class="panel-body">
                       <h4>@p.title</h4>
                       <p class="text-muted">@p.description</p>
                   </div>
                   <div class="panel-footer">
                       <div class="text-right">
-                          <a href="@routes.Tickets.edit(p.id)" class="btn btn-default btn-xs pull-left"><i class="fa fa-pencil"></i></a>
-                          <a href="@routes.Tickets.back(p.id)" class="btn btn-danger btn-xs"><i class="fa fa-arrow-left"></i></a>
-                          <a href="@routes.Tickets.move(p.id)" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
+                          <a href="@routes.Tasks.edit(p.id)" class="btn btn-default btn-xs pull-left"><i class="fa fa-pencil"></i></a>
+                          <a href="@routes.Tasks.back(p.id)" class="btn btn-danger btn-xs"><i class="fa fa-arrow-left"></i></a>
+                          <a href="@routes.Tasks.move(p.id)" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
                       </div>
                   </div>
               </div>
@@ -125,17 +125,17 @@
           </div>        
 
           @for(p <- dones) {
-          <!-- Tickets column -->
+          <!-- Tasks column -->
           <div class="row">
             <div class="col-md-12">
-              <div class="panel panel-default panel-ticket">
+              <div class="panel panel-default panel-task">
                   <div class="panel-body">
                       <h4>@p.title</h4>
                       <p class="text-muted">@p.description</p>
                   </div>
                   <div class="panel-footer">
                       <div class="text-right">
-                          <a href="@routes.Tickets.back(p.id)" class="btn btn-danger btn-xs"><i class="fa fa-arrow-left"></i></a>
+                          <a href="@routes.Tasks.back(p.id)" class="btn btn-danger btn-xs"><i class="fa fa-arrow-left"></i></a>
                       </div>
                   </div>
               </div>
@@ -145,14 +145,14 @@
         </div> <!-- /.col-md-3 -->
     </div> <!-- /.row -->
     
-<!-- New Ticket Modal -->
-<form action="@routes.Tickets.save(project.id)" method="POST" role="form">
-<div class="modal fade" id="newTicketModal" tabindex="-1" role="dialog" aria-labelledby="newTicketLabel" aria-hidden="true">
+<!-- New Task Modal -->
+<form action="@routes.Tasks.save(project.id)" method="POST" role="form">
+<div class="modal fade" id="newTaskModal" tabindex="-1" role="dialog" aria-labelledby="newTaskLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="newTicketLabel">New Ticket</h4>
+        <h4 class="modal-title" id="newTaskLabel">New Ticket</h4>
       </div>
       <div class="modal-body">
         <input name="title" type="text" class="form-control" placeholder="Ticket Title" />

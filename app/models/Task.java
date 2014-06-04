@@ -47,7 +47,7 @@ public class Task extends Model {
 	
 	//FIXME @Constraints.Required
 	//@ManyToOne
-	//public Project project;
+	public Project project;
 	
 	/**
 	 * Generic query helper for entity Computer with id Long
