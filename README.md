@@ -1,8 +1,8 @@
 # Nudge
 
-Nudge (Work In Progress) is a project management tool which use your intuitions and emotions as stimuli to force you finish a task!
+Nudge (Work In Progress) is a project management tool, uses your intuitions and emotions as stimuli to force you finish a task!
 
-Check *References* for more.
+Check out *References* for more.
 
 ## References
 1. [Dan Ariely, "3 main lessons of Psychology"](http://danariely.com/2008/05/05/3-main-lessons-of-psychology/)
@@ -15,7 +15,7 @@ Check *References* for more.
 
 ## Authors
 
-- Morteza Ansarinia <ansarinia@me.com> ([cards.onto.ir](http://cards.onto.ir)).
+- Morteza Ansarinia <ansarinia@me.com>.
 - Mostafa Salarirad <salarirad@gmail.com>.
 
 ## Copyright and License
